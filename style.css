@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:wght@700;900&display=swap");
+
 :root {
   /* Colors */
 
@@ -16,7 +18,70 @@
   --white: hsl(0, 0%, 100%);
 
   /* Typography */
+  --barlow: "Barlow", sans-serif;
+  --fraunes: "Fraunces", serif;
 
   /* Body Copy */
   --font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+.header {
+  background-image: url("./images/desktop/image-header.jpg");
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center bottom;
+  padding: 2rem 3rem;
+  margin: 0;
+}
+.centered__header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-size: 26px;
+  letter-spacing: 0.5cm;
+}
+.centered__header__content h1 {
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  font-family: var(--fraunes);
+  font-weight: 900;
+}
+.header__ul {
+  display: flex;
+  align-items: center;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header__link {
+  margin-left: 2rem;
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--barlow);
+}
+.header__contact {
+  background-color: var(--white);
+  color: var(--very-dark-desaturated-blue);
+  border-radius: 2.5rem;
+  padding: 0.5rem 2rem;
+  font-family: var(--fraunes);
+  transition: all 0.6s;
+}
+.header__contact:hover {
+  background-color: rgba(255, 255, 255, 0.241);
+  color: var(--white);
+}
+
+/* For mobile */
+.header__links__modal,
+.header__menu {
+  display: none;
 }
